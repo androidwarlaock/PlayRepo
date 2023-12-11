@@ -1,0 +1,7 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(E:\newrepo\newproject\conf\application.conf,E:\newrepo\newproject\target\scala-2.12\classes\application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(E:\newrepo\newproject\conf\evolutions,E:\newrepo\newproject\target\scala-2.12\classes\evolutions)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(E:\newrepo\newproject\conf\evolutions\default,E:\newrepo\newproject\target\scala-2.12\classes\evolutions\default)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(E:\newrepo\newproject\conf\evolutions\default\1.sql,E:\newrepo\newproject\target\scala-2.12\classes\evolutions\default\1.sql)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(E:\newrepo\newproject\conf\logback.xml,E:\newrepo\newproject\target\scala-2.12\classes\logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(E:\newrepo\newproject\conf\routes,E:\newrepo\newproject\target\scala-2.12\classes\routes)[0m
