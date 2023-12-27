@@ -11,7 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Book extends Model {
+public class
+Book extends Model {
 
     @Id
     public Integer id;

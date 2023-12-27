@@ -5,8 +5,9 @@
 # An example controller showing a sample home page
 #GET     /                           controllers.HomeController.index
 
-
+GET     /bookpre/:id                    controllers.BooksController.getStoredProcedureWithParameters(id : Integer)
 GET     /books                      controllers.BooksController.index()
+GET     /booksprocedure             controllers.BooksController.getStoredProcedure()
 GET     /books/create               controllers.BooksController.create(request: Request)
 GET     /books/:id                  controllers.BooksController.show(id : Integer)
 GET     /books/edit/:id             controllers.BooksController.edit(id: Integer,request: Request)

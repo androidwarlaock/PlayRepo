@@ -1,10 +1,16 @@
 package controllers;
 
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import javax.inject.Inject;
 
+import io.ebean.Ebean;
+import io.ebean.Transaction;
 import models.Book;
 import play.data.Form;
 import play.data.FormFactory;
@@ -120,4 +126,64 @@ public class BooksController extends Controller {
 					"    }  ";
 			return ok(jsn);
 		}
+
+
+		public Result getStoredProcedure()
+		{
+			Transaction tx = Ebean.beginTransaction();
+			String sql = "{CALL newStoredProcedure()}";
+			List<Book> books =  new ArrayList<Book>() ;
+			try {
+				Connection dbConnection = tx.getConnection();
+				CallableStatement callableStatement = dbConnection.prepareCall(sql);
+				ResultSet rs = callableStatement.executeQuery();
+
+				while (rs.next()) {
+					//HOW TO CONVER row -> model ?
+                  Book bk =  new Book();
+				  bk.setId(rs.getInt("id"));
+				  bk.setAuthor(rs.getString("author"));
+				  bk.setTitle(rs.getString("title"));
+				  bk.setPrice(rs.getInt("price"));
+                  books.add(bk);
+				}
+				Ebean.commitTransaction();
+
+
+			}catch (Exception e){
+
+			}
+
+			return  ok(index.render(books));
+		}
+
+	public Result getStoredProcedureWithParameters(Integer id)
+	{
+		Transaction tx = Ebean.beginTransaction();
+		String sql = "{CALL getBookID(?)}";
+		List<Book> books =  new ArrayList<Book>() ;
+		try {
+			Connection dbConnection = tx.getConnection();
+			CallableStatement callableStatement = dbConnection.prepareCall(sql);
+			callableStatement.setInt(1,id);
+			ResultSet rs = callableStatement.executeQuery();
+
+			while (rs.next()) {
+				//HOW TO CONVER row -> model ?
+				Book bk =  new Book();
+				bk.setId(rs.getInt("id"));
+				bk.setAuthor(rs.getString("author"));
+				bk.setTitle(rs.getString("title"));
+				bk.setPrice(rs.getInt("price"));
+				books.add(bk);
+			}
+			Ebean.commitTransaction();
+
+
+		}catch (Exception e){
+
+		}
+
+		return  ok(index.render(books));
+	}
 }

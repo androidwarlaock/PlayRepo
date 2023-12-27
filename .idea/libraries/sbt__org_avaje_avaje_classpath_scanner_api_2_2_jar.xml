@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="sbt: org.avaje:avaje-classpath-scanner-api:2.2:jar" external-system-id="SBT">
+  <library name="sbt: org.avaje:avaje-classpath-scanner-api:2.2:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.avaje/avaje-classpath-scanner-api/jars/avaje-classpath-scanner-api-2.2.jar!/" />
     </CLASSES>

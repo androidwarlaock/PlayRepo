@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="sbt: org.javassist:javassist:3.21.0-GA:jar" external-system-id="SBT">
+  <library name="sbt: org.javassist:javassist:3.21.0-GA:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.21.0-GA.jar!/" />
     </CLASSES>

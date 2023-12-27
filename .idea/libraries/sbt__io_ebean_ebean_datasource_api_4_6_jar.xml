@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="sbt: io.ebean:ebean-datasource-api:4.6:jar" external-system-id="SBT">
+  <library name="sbt: io.ebean:ebean-datasource-api:4.6:jar">
     <CLASSES>
       <root url="jar://$USER_HOME$/.ivy2/cache/io.ebean/ebean-datasource-api/jars/ebean-datasource-api-4.6.jar!/" />
     </CLASSES>

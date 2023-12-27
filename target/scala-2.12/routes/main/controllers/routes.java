@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/newrepo/newproject/conf/routes
-// @DATE:Mon Dec 11 21:28:01 IST 2023
+// @DATE:Wed Dec 27 21:14:32 IST 2023
 
 package controllers;
 

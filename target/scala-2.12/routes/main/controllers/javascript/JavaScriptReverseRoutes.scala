@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:E:/newrepo/newproject/conf/routes
-// @DATE:Mon Dec 11 21:28:01 IST 2023
+// @DATE:Wed Dec 27 21:14:32 IST 2023
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -8,10 +8,10 @@ import play.api.routing.JavaScriptReverseRoute
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:9
+// @LINE:8
 package controllers.javascript {
 
-  // @LINE:19
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:20
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -31,7 +31,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:9
+  // @LINE:8
   class ReverseBooksController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -39,7 +39,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:14
+    // @LINE:15
     def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.save",
       """
@@ -49,7 +49,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:10
+    def getStoredProcedure: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.BooksController.getStoredProcedure",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "booksprocedure"})
+        }
+      """
+    )
+  
+    // @LINE:12
     def show: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.show",
       """
@@ -59,7 +69,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:16
     def destroy: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.destroy",
       """
@@ -69,7 +79,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:16
+    // @LINE:17
     def returnJson: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.returnJson",
       """
@@ -79,7 +89,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:8
+    def getStoredProcedureWithParameters: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.BooksController.getStoredProcedureWithParameters",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "bookpre/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:13
     def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.edit",
       """
@@ -89,7 +109,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:14
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.update",
       """
@@ -99,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:10
+    // @LINE:11
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BooksController.create",
       """
